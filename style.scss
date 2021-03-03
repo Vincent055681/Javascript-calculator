@@ -1,0 +1,123 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+*, ::before, ::after {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include flexbox;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(10,88,11,1) 15%, rgba(44,228,0,1) 100%);
+}
+
+.calculator {
+    background: #9AA7D1;
+    width: 300px;
+    padding: 10px;
+    .screen {
+        background: white;
+        width: 100%;
+        height: 75px;
+    } 
+    .grid-buttons {
+        display: grid;
+        margin: 20px 0 10px 0;
+        grid-template-columns: repeat (4, 1fr);
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-areas: 
+        "touchC touchleftparenthesis touchrightparenthesis touchdivision"
+        "number7 number8 number9 touchx"
+        "number4 number5 number6 touchsubstraction"
+        "number1 number2 number3 touchplus"
+        "number0 touchdot touchequal touchequal";
+        grid-gap: 10px;
+        
+        .button {
+            background: #D2B46B;
+            @include flexbox;
+            height: 40px;
+
+        }
+        #C {
+            grid-area: touchC;
+
+        }
+        #left-parenthesis {
+            grid-area: touchleftparenthesis;
+        }
+        #right-parenthesis {
+            grid-area: touchrightparenthesis;
+
+        }
+        #division {
+            grid-area: touchdivision;
+
+        }
+        #7 {
+            grid-area: number7;
+
+        }
+        #8 {
+            grid-area: number8;
+
+        }
+        #9 {
+            grid-area: number9;
+
+        }
+        #X {
+            grid-area: touchx;
+        }
+        #4 {
+            grid-area: number4;
+
+        }
+        #5 {
+            grid-area: number5;
+
+        }
+        #6 {
+            grid-area: number6;
+
+        }
+        #substraction {
+            grid-area: touchsubstraction;
+
+        }
+        #1 {
+            grid-area: number1;
+
+        }
+        #2 {
+            grid-area: number2;
+
+        }
+        #3 {
+            grid-area: number3;
+
+        }
+        #plus {
+            grid-area: touchplus;
+
+        }
+        #0 {
+            grid-area: number0;
+
+        }
+        #dot {
+            grid-area: touchdot;
+
+        }
+        #equal {
+            grid-area: touchequal ;
+
+        }
+    }
+}

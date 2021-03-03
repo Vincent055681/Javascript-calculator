@@ -1,0 +1,175 @@
+*, ::before, ::after {
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(15%, #0a580b), to(#2ce400));
+  background: linear-gradient(90deg, #0a580b 15%, #2ce400 100%);
+}
+
+.calculator {
+  background: #9AA7D1;
+  width: 300px;
+  padding: 10px;
+}
+
+.calculator .screen {
+  background: white;
+  width: 100%;
+  height: 75px;
+}
+
+.calculator .grid-buttons {
+  display: -ms-grid;
+  display: grid;
+  margin: 20px 0 10px 0;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+  -ms-grid-rows: repeat 5, 1fr;
+      grid-template-rows: repeat 5, 1fr;
+      grid-template-areas: "touchC touchleftparenthesis touchrightparenthesis touchdivision" "number7 number8 number9 touchx" "number4 number5 number6 touchsubstraction" "number1 number2 number3 touchplus" "number0 touchdot touchequal touchequal";
+  grid-gap: 10px;
+}
+
+.calculator .grid-buttons .button {
+  background: #D2B46B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+.calculator .grid-buttons #C {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: touchC;
+}
+
+.calculator .grid-buttons #left-parenthesis {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: touchleftparenthesis;
+}
+
+.calculator .grid-buttons #right-parenthesis {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: touchrightparenthesis;
+}
+
+.calculator .grid-buttons #division {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: touchdivision;
+}
+
+.calculator .grid-buttons #7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: number7;
+}
+
+.calculator .grid-buttons #8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: number8;
+}
+
+.calculator .grid-buttons #9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: number9;
+}
+
+.calculator .grid-buttons #X {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: touchx;
+}
+
+.calculator .grid-buttons #4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: number4;
+}
+
+.calculator .grid-buttons #5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: number5;
+}
+
+.calculator .grid-buttons #6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: number6;
+}
+
+.calculator .grid-buttons #substraction {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: touchsubstraction;
+}
+
+.calculator .grid-buttons #1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: number1;
+}
+
+.calculator .grid-buttons #2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: number2;
+}
+
+.calculator .grid-buttons #3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: number3;
+}
+
+.calculator .grid-buttons #plus {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: touchplus;
+}
+
+.calculator .grid-buttons #0 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: number0;
+}
+
+.calculator .grid-buttons #dot {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: touchdot;
+}
+
+.calculator .grid-buttons #equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: touchequal;
+}
+/*# sourceMappingURL=style.css.map */
