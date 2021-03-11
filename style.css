@@ -3,6 +3,11 @@
           box-sizing: 0;
   margin: 0;
   padding: 0;
+  font-family: consolas, sans-serif;
+}
+
+p {
+  color: red;
 }
 
 body {
@@ -21,15 +26,27 @@ body {
 }
 
 .calculator {
+  border: solid 4px black;
+  border-radius: 15px;
   background: #9AA7D1;
   width: 300px;
   padding: 10px;
 }
 
 .calculator .screen {
+  position: relative;
   background: white;
+  border-radius: 15px;
+  border: solid 1px black;
   width: 100%;
   height: 75px;
+}
+
+.calculator .screen .place-for-numbers {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  font-size: 50px;
 }
 
 .calculator .grid-buttons {
@@ -56,6 +73,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 40px;
+  border-radius: 15px;
+  border: solid 2px black;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .calculator .grid-buttons #C {
@@ -171,5 +192,17 @@ body {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: touchequal;
+}
+
+.button:active {
+  -webkit-transform: translate(0px, 2px);
+          transform: translate(0px, 2px);
+  border-bottom: solid 1px !important;
+}
+
+.active-keydown {
+  -webkit-transform: translate(0px, 2px);
+          transform: translate(0px, 2px);
+  border-bottom: solid 1px !important;
 }
 /*# sourceMappingURL=style.css.map */

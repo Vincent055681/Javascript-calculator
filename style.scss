@@ -9,6 +9,11 @@
     box-sizing: 0;
     margin: 0;
     padding: 0;
+    font-family: consolas, sans-serif;
+}
+
+p {
+    color: red;
 }
 
 body {
@@ -18,13 +23,23 @@ body {
 }
 
 .calculator {
+    border: solid 4px black;
+    border-radius: 15px;
     background: #9AA7D1;
     width: 300px;
     padding: 10px;
     .screen {
+        position: relative;
         background: white;
+        border-radius: 15px;
+        border: solid 1px black;
         width: 100%;
         height: 75px;
+        .place-for-numbers {
+            position: absolute;
+            right: 10px; bottom: 0px;
+            font-size: 50px;
+        }
     } 
     .grid-buttons {
         display: grid;
@@ -39,10 +54,15 @@ body {
         "number0 touchdot touchequal touchequal";
         grid-gap: 10px;
         
+        
         .button {
             background: #D2B46B;
             @include flexbox;
             height: 40px;
+            border-radius: 15px;
+            border: solid 2px black;
+            font-size: 20px;
+            cursor: pointer;
 
         }
         #C {
@@ -120,4 +140,13 @@ body {
 
         }
     }
+}
+.button:active {
+    transform : translate(0px, 2px);
+    border-bottom: solid 1px !important;
+}
+
+.active-keydown {
+    transform : translate(0px, 2px);
+    border-bottom: solid 1px !important;
 }
